@@ -67,3 +67,5 @@ package-lock.json
 *.docx
 # instructions/.~lock.Desafio_Técnico_-_Estágio_em_Desenvolvimento_de_Software.odt#
 */*.~lock.*
+/build
+/dist
