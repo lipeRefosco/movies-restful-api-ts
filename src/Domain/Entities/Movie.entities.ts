@@ -28,4 +28,10 @@ export class Movie {
     public upRate(): void {
         ++this._rate;
     }
+
+    public downRate(): void {
+        if(this._rate == 0) return;
+        
+        --this._rate;
+    }
 }
