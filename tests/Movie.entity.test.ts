@@ -1,4 +1,4 @@
-import { Movie } from "../src/Domain/Entities/Movie.entities"
+import { Movie } from "../src/Domain/Entities/Movie.entity"
 import { IMovieRepository } from "../src/Domain/Interfaces/IMovieRepository.interface"
 
 describe("Movie Entity Tests", () => {
