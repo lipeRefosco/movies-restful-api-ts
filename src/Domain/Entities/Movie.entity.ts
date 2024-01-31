@@ -1,4 +1,4 @@
-import { IMovieRepository } from "../Interfaces/IMovieRepository.interface";
+import { IMovieModel } from "../Interfaces/IMovie.model";
 
 export class Movie {
     private _id: number;
@@ -6,7 +6,7 @@ export class Movie {
     public synopsis: string;
     private _rate: number;
 
-    constructor(movie: IMovieRepository) {
+    constructor(movie: IMovieModel) {
         this._id = movie.id;
         this.title = movie.title;
         this.synopsis = movie.synopsis;

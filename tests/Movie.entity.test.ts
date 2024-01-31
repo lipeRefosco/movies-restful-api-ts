@@ -1,9 +1,9 @@
 import { Movie } from "../src/Domain/Entities/Movie.entity"
-import { IMovieRepository } from "../src/Domain/Interfaces/IMovieRepository.interface"
+import { IMovieModel } from "../src/Domain/Interfaces/IMovie.model";
 
 describe("Movie Entity Tests", () => {
     it("Shoud up the rate when use upRate method.", () => {
-        const given: IMovieRepository = {
+        const given: IMovieModel = {
             id: 0,
             title: "Lorem Ipsum",
             synopsis: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -17,12 +17,12 @@ describe("Movie Entity Tests", () => {
     })
 
     it("Shoud down the rate when use downRate method.", () => {
-        const given: IMovieRepository = {
+        const given: IMovieModel = {
             id: 0,
             title: "Lorem Ipsum",
             synopsis: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
             rate: 1
-        }
+        };
 
         const movie: Movie = new Movie(given);
         
@@ -31,7 +31,7 @@ describe("Movie Entity Tests", () => {
     })
 
     it("The rate shoud't be less than 0.", () => {
-        const given: IMovieRepository = {
+        const given: IMovieModel = {
             id: 0,
             title: "Lorem Ipsum",
             synopsis: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
