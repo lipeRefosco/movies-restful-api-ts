@@ -7,8 +7,14 @@ export abstract class DatabaseUtils {
                      .map(c => ':' + c)
     }
 
+    public static convertValueToValidSyntax(object: object) {
+        return Object.values(object)
+                     .map(v => "'" + v + "'");
+    }
+
     public static convertToNamedBindValuesObject(values: object): object {
         const columnsBinded = this.convertObjectColumnsToNamedBindColumn(values);
-        return twoArraysToObject(columnsBinded, Object.values(values));
+        const valuesValidSyntax = this.convertValueToValidSyntax(values);
+        return twoArraysToObject(columnsBinded, valuesValidSyntax);
     }
 }
