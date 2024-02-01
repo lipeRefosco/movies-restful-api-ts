@@ -1,5 +1,5 @@
 import { Movie } from "../src/Domain/Entities/Movie.entity"
-import { IMovieModel } from "../src/Domain/Interfaces/IMovie.model";
+import { IMovieModel } from "../src/Domain/Entities/IMovie.entity";
 
 describe("Movie Entity Tests", () => {
     it("Shoud up the rate when use upRate method.", () => {

@@ -1,4 +1,4 @@
-import { IMovieModel } from "../Interfaces/IMovie.model";
+import { IMovieModel } from "./IMovie.entity";
 
 export class Movie {
     private _id: number;
