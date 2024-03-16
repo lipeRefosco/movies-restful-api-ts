@@ -3,10 +3,9 @@ import { IDatabase } from "../Repositories/IDatabase.repository";
 import { ICrud } from "./ICrud.service"
 
 export class CrudService implements ICrud {
-    private _tableName = "movies"
-
     constructor(
         private _database: IDatabase,
+        private _tableName: string
     ) { }
 
     public create(values: object): void {
@@ -38,7 +37,7 @@ export class CrudService implements ICrud {
         const conditionBinded = DatabaseUtils.convertToNamedBindValuesObject(condition)
         const conditionColValueRelation = Object.keys(conditionBinded).map(k => [k, condition[k]])
         
-        const sql = `DELETE FROM ${this._database} WHERE ${conditionColValueRelation};`
+        const sql = `DELETE FROM ${this._tableName} WHERE ${conditionColValueRelation};`
 
         this._database.exec({sql, values: condition})
     }
