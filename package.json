@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "dev": "nodemon",
     "test": "jest"
   },
   "author": "",
